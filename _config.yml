@@ -38,7 +38,7 @@ social:
   email: yichyzang@gmail.com # change to your email address
   links:
     # The first element serves as the copyright owner's link
-    - http://phylab.fudan.edu.cn/doku.php?id=home:students:21300190008 # change to your twitter homepage
+    #- http://phylab.fudan.edu.cn/doku.php?id=home:students:21300190008 # change to your twitter homepage
     - https://github.com/yichizang # change to your github homepage
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
