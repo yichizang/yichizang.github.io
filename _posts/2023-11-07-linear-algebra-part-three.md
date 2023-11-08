@@ -14,7 +14,7 @@ math: true
 
 $$\ket{v}+\ket{w}\in V\oplus W.$$
 
-直和空间的加法和数乘是非常自然的
+直和空间的加法和数乘就是
 
 $$\begin{aligned}
 (\ket{v_1}+\ket{w_1})+(\ket{v_2}+\ket{w_2})&=\ket{v_1}+\ket{v_2}+\ket{w_1}+\ket{w_2}\\
