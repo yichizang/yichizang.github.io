@@ -127,7 +127,7 @@ $$V\otimes V\otimes\cdots\otimes V=V^{\otimes n}.$$
 
 对称积很好定义，为了使对称积中任意两个矢量交换都是对称的，我们只需要像之前一样将所有可能出现的排序都平均起来就好
 
-$$\ket{v_{1}}\otimes_S\ket{v_{2}}\otimes_S\cdots=\frac{1}{N}\sum_{\sigma\in S_n}\ket{v_{{\sigma_1}}}\otimes\ket{v_{{\sigma_2}}}\otimes\cdots,$$
+$$\ket{v_1}\otimes_S\ket{v_2}\otimes_S\cdots=\frac{1}{N}\sum_{\sigma\in S_n}\ket{v_{\sigma_1}}\otimes\ket{v_{\sigma_2}}\otimes\cdots,$$
 
 其中的求和是对 $(1,2,\cdots)$ 所有可能的排列 $\sigma$ 进行，$N$ 则是可能的排列总数。这样一来，对称积对于任意矢量的交换都是对称的。
 
@@ -145,7 +145,7 @@ $$\mathrm{sgn}(1,3,2,4,\cdots)=-1.$$
 
 这么一来，反称积就可以被定义为
 
-$$\ket{v_{1}}\wedge\ket{v_{2}}\wedge\cdots=\frac{1}{N}\sum_{\sigma\in S_n}\mathrm{sgn}(\sigma)\ket{v_{{\sigma_1}}}\otimes\ket{v_{{\sigma_2}}}\otimes\cdots,$$
+$$\ket{v_1}\wedge\ket{v_2}\wedge\cdots=\frac{1}{N}\sum_{\sigma\in S_n}\mathrm{sgn}(\sigma)\ket{v_{\sigma_1}}\otimes\ket{v_{\sigma_2}}\otimes\cdots,$$
 
 同样也对所有的排列求和。当我们交换任意两个矢量时，所有排列的 $\mathrm{sgn}$ 都会变号，因此最终的结果也就会多一个负号。
 
