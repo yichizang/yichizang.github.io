@@ -69,9 +69,15 @@ $$\forall i,j,\qquad\ket{v_i}\otimes\ket{w_j}.$$
 
 换句话说，张量积空间可以被看作是这一组基生成的空间。因此，张量积空间的维数就是两个空间维数的乘积。
 
+张量积空间上的算符也是类似的
+
+$$\mathcal{L}(V)\otimes\mathcal{L}(W)$$
+
+中的元素，作用的方式也同样是 *苹果削皮器和香蕉削皮器* 的规则。
+
 ### 算符与张量
 
-作为张量积的一个例子，考虑一个线性空间 $V$ 和它的对偶空间 $V^*$，它们的张量积空间是 $V\otimes V^*$。这个空间的一组基自然就是 $\ket{v_i}\otimes\bra{v_j}$。但在狄拉克记号中更常见的写法是 $\ket{v_i}\bra{v_j}$。
+作为张量积的一个例子，考虑一个线性空间 $V$ 和它的对偶空间 $V^\ast$，它们的张量积空间是 $V\otimes V^\ast$。这个空间的一组基自然就是 $\ket{v_i}\otimes\bra{v_j}$。但在狄拉克记号中更常见的写法是 $\ket{v_i}\bra{v_j}$。
 
 注意到，在介绍 $V$ 上的算符时，一个算符实际上可以被写为
 
@@ -80,13 +86,13 @@ $$X=\sum_{i,j}\ket{v_i}\braket{v_i|X|v_j}\bra{v_j}
 
 换句话说，$\ket{v_i}\bra{v_j}$ 实际上也是 $V$ 上算符空间 $\mathcal{L}(V)$ 的一组基。于是我们知道
 
-$$V\otimes V^*$$
+$$V\otimes V^\ast$$
 
 就是 $V$ 上的算符空间，或者说 $(1,1)$ 型张量构成的空间。
 
 不难猜到，一个更复杂的张量，例如 $T^{ab}{}_{cde}{}^f$ 是
 
-$$V\otimes V\otimes V^*\otimes V^*\otimes V^*\otimes V$$
+$$V\otimes V\otimes V^\ast\otimes V^\ast\otimes V^\ast\otimes V$$
 
 中的一个元素。这也就是为什么它们要叫做 **张量**[^tensor]。
 
@@ -120,7 +126,7 @@ $$\ket{v_i}\wedge\ket{v_j},\quad i<j.$$
 
 $$V\otimes V\otimes\cdots\otimes V=V^{\otimes n}.$$
 
-这也就是 $(n,0)$ 型张量组成的空间。它的对偶空间是 $(V^*)^{\otimes n}$。在这个空间上同样可以定义对称积和反称积空间。
+这也就是 $(n,0)$ 型张量组成的空间。它的对偶空间是 $(V^\ast)^{\otimes n}$。在这个空间上同样可以定义对称积和反称积空间。
 
 > 注意到，当 $n\ne2$ 时，就无法再将 $V^{\otimes n}$ 写为对称积空间和反称积空间的直和。
 {: .prompt-warning }
@@ -129,7 +135,7 @@ $$V\otimes V\otimes\cdots\otimes V=V^{\otimes n}.$$
 
 $$\ket{v_1}\otimes_S\ket{v_2}\otimes_S\cdots=\frac{1}{N}\sum_{\sigma\in S_n}\ket{v_{\sigma_1}}\otimes\ket{v_{\sigma_2}}\otimes\cdots,$$
 
-其中的求和是对 $(1,2,\cdots)$ 所有可能的排列 $\sigma$ 进行，$N$ 则是可能的排列总数。这样一来，对称积对于任意矢量的交换都是对称的。
+其中的求和是对 $(1,2,\cdots)$ 的所有可能排列 $\sigma$ 进行，$N$ 则是可能的排列总数。这样一来，对称积对于任意矢量的交换都是对称的。
 
 对于反称积，我们则希望对于任意两个矢量的交换都是反称的。换句话说，任意交换两个矢量都会使结果多一个负号
 
