@@ -27,13 +27,13 @@ g'_{\mu\nu}=&g_{\sigma\lambda}\frac{\partial x^\sigma}{\partial x^\mu}\frac{\par
 \end{aligned}
 $$
 
-> 举例来说，如果要求 $g'_{\mu\nu}=g_{\mu\nu}$，则可以得到约束方程
+> 举例来说，如果要求 $g^{\prime}_{\mu\nu}=g_{\mu\nu}$，则可以得到约束方程
 > $$(\partial_\mu\epsilon_\nu+\partial_\nu\epsilon_\mu)=0,$$
 > 其解为庞加莱变换的 **基灵矢量**（Killing vector）
 > $$\epsilon^\mu=a^\mu+\omega^\mu{}_\nu x^\nu.$$
-{: .prompt-tips }
+{: .prompt-tip }
 
-对于共形变换，我们要求 $g'_{\mu\nu}=\Omega(x)g_{\mu\nu}$，将新的约束方程写为
+对于共形变换，我们要求 $g^{\prime}_{\mu\nu}=\Omega(x)g_{\mu\nu}$，将新的约束方程写为
 
 $$
 \partial_\mu\epsilon_\nu+\partial_\nu\epsilon_\mu=2\sigma(x) g_{\mu\nu},\quad\Omega(x)=e^{-2\sigma(x)}\approx 1-2\sigma(x).
@@ -124,12 +124,12 @@ D=J^{d+1,d+2},&\quad K^\mu=J^{\mu,d+1}-J^{\mu,d+2}.
 
 有趣的一点是，共形变换可以将任意三个点 $(x_1,x_2,x_3)$ 变换到任意另外三个点 $(x'_1,x'_2,x'_3)$：
 1. 首先将 $x_1$ 平移至原点；
-1. 利用特殊共形变换，将 $x_3$ 推至无穷远点，此时三点变为 $(0,x''_2,\infty)$；
-1. 用转动和缩放将 $x''_2$ 转动至新的一点 $x'''_2$；
+1. 利用特殊共形变换，将 $x_3$ 推至无穷远点，此时三点变为 $(0,x^{\prime\prime}_2,\infty)$；
+1. 用转动和缩放将 $x^{\prime\prime}_2$ 转动至新的一点 $x^{\prime\prime\prime}_2$；
 1. 用特殊共形变换，将无穷远点变回 $x'_3-x'_1$；
 1. 再次平移，将原点移至 $x'_1$。
 
-只要计算出 $x'''_2$ 的值，即可完成这个变换。
+只要计算出 $x^{\prime\prime\prime}_2$ 的值，即可完成这个变换。
 
 ## 脚注
 
