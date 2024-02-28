@@ -27,13 +27,16 @@ g'_{\mu\nu}=&g_{\sigma\lambda}\frac{\partial x^\sigma}{\partial x^\mu}\frac{\par
 \end{aligned}
 $$
 
-> 举例来说，如果要求 $g^{\prime}_{\mu\nu}=g_{\mu\nu}$，则可以得到约束方程
+> 举例来说，如果要求 $g^\prime_{\mu\nu}=g_{\mu\nu}$，则可以得到约束方程
+> 
 > $$(\partial_\mu\epsilon_\nu+\partial_\nu\epsilon_\mu)=0,$$
+> 
 > 其解为庞加莱变换的 **基灵矢量**（Killing vector）
+> 
 > $$\epsilon^\mu=a^\mu+\omega^\mu{}_\nu x^\nu.$$
 {: .prompt-tip }
 
-对于共形变换，我们要求 $g^{\prime}_{\mu\nu}=\Omega(x)g_{\mu\nu}$，将新的约束方程写为
+对于共形变换，我们要求 $g^\prime_{\mu\nu}=\Omega(x)g_{\mu\nu}$，将新的约束方程写为
 
 $$
 \partial_\mu\epsilon_\nu+\partial_\nu\epsilon_\mu=2\sigma(x) g_{\mu\nu},\quad\Omega(x)=e^{-2\sigma(x)}\approx 1-2\sigma(x).
@@ -74,7 +77,9 @@ $$
 可以通过考察变换在函数上的作用，写出其微分算符表示。
 
 > 举例来说，对于无限小平移，可以写出
+>
 > $$f(x)\mapsto f(x+a)=f(x)+a^\mu\partial_\mu f(x).$$
+>
 > 这样一来，可以将平移生成算符写为 $P_\mu=i\partial_\mu$。
 {: .prompt-info }
 
@@ -90,8 +95,11 @@ $$
 总共的自由度数量就是 $(d+1)(d+2)/2$。
 
 > 这个数字看着眼熟。确实，在欧氏空间中，这个代数同构于 $\mathfrak{so}(d+1,1)$，而在闵氏空间中，它同构于 $\mathfrak{so}(d,2)$。具体来说，给出度规
+>
 > $$\mathrm{d}s^2=g_{\mu\nu}\mathrm{d}x^\mu\mathrm{d}x^\nu+\mathrm{d}x^{d+1}\mathrm{d}x^{d+1}-\mathrm{d}x^{d+2}\mathrm{d}x^{d+2},$$
+>
 > 则可以构造同构
+>
 > $$\begin{aligned}
 M^{\mu\nu}=J^{\mu\nu},&\quad P^\mu=J^{\mu,d+1}+J^{\mu,d+2},\\
 D=J^{d+1,d+2},&\quad K^\mu=J^{\mu,d+1}-J^{\mu,d+2}.
