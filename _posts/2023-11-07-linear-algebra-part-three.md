@@ -1,8 +1,8 @@
 ---
-title: 猫猫速通数学（三）
+title: 线性代数速通（三）
 date: 2023-11-07
-categories: [Path to physics, How CAT learn math]
-tags: [math]
+categories: [Path to physics, CAThematics]
+tags: [math, linear algebra]
 math: true
 ---
 

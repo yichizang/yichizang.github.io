@@ -1,8 +1,8 @@
 ---
-title: 猫猫速通数学（一）
+title: 线性代数速通（一）
 date: 2023-10-25
-categories: [Path to physics, How CAT learn math]
-tags: [math]
+categories: [Path to physics, CAThematics]
+tags: [math, linear algebra]
 math: true
 ---
 
@@ -152,6 +152,14 @@ X(\ket{a}+\ket{b})&=X\ket{a}+X\ket{b}.
 
 $$\bra{a}X=\bra{b}.$$
 
+有两个重要的算符，分别是 **单位算符** $I$ 和 **零算符** $0$。单位算符作用在任何矢量上都得到那个矢量本身
+
+$$I\ket{v}=\ket{v},$$
+
+零算符作用在任何矢量上则都得到 $0$。
+
+#### 伴随算符
+
 算符作用在矢量上对应的对偶矢量是
 
 $$X\ket{a}\quad\leftrightarrow\quad\bra{a}X^\dagger.$$
@@ -165,13 +173,27 @@ $$X\ket{a}\quad\leftrightarrow\quad\bra{a}X^\dagger.$$
 
 $$\braket{a|X|b}=\braket{b|X^\dagger|a}^*.$$
 
-一个有趣的算符是 $\ket{a}\bra{b}$，它的伴随算符是 $\ket{b}\bra{a}$。*读者可以思考一下这是怎么回事。*
+#### 逆算符
+
+对于一个算符 $X$，*有可能* 存在这样一个算符 $X^{-1}$，使得
+
+$$X^{-1}X=XX^{-1}=I.$$
+
+如果存在的话，那么就称这个算符 $X^{-1}$ 是 $X$ 的 **逆算符**，$X$ 称为 **可逆的**。
+
+不难发现
+
+$$(X^{-1})^{-1}=X.$$
+
+#### 一些别的算符
+
+一个有趣的算符是 $\ket{a}\bra{b}$，它的伴随算符是 $\ket{b}\bra{a}$，并且它一般是不可逆的。*读者可以思考一下这是怎么回事。*
 
 对于一组正交归一的基，更有趣的一个算符是
 
 $$\sum_i\ket{a_i}\bra{a_i}.$$
 
-这实际上是 **单位算符**：作用到任何东西上都得到那个东西本身。因此，可以把它插入到各种地方[^identity]，这被称为「resolution of identity」，*我不知道它的中文名叫啥*。它的伴随自然是它本身。
+这实际上就是单位算符，因此，可以把它插入到各种地方[^identity]，这被称为「resolution of identity」，*我不知道它的中文名叫啥*。它的伴随自然是它本身。
 
 ### 算符与矩阵
 
@@ -189,6 +211,9 @@ $$\sum_{i,j}X^i{}_jv^j\ket{a_i}.$$
 
 可以发现 $X^i{}_j$ 实际上就是一个 $(1,1)$ 型张量。我们也确实知道，一个 $(1,1)$ 型张量吃一个矢量会吐出一个矢量，这也符合算符的定义。
 
+> 单位算符对应的张量就是 $\delta^i{}_j$。
+{: ,prompt-tip }
+
 $\braket{a_i\|X\|a_j}$ 被称为 $X$ 的 **矩阵元**。由内积的性质我们知道，$X^\dagger$ 的矩阵元即为
 
 $$\braket{a_i|X^\dagger|a_j}=\braket{a_j|X|a_i}^*.$$
@@ -196,6 +221,7 @@ $$\braket{a_i|X^\dagger|a_j}=\braket{a_j|X|a_i}^*.$$
 这正是 $X$ 的矩阵元的 *共轭转置*。
 
 > 矩阵记法实际上也是线性代数的常见记法，矢量记为列向量而对偶矢量记为行向量。对这一记法我们不再过多介绍，不过 **矩阵** 实际上就是指 $(1,1)$ 型张量[^mat]。
+{: .prompt-info }
 
 ### 基变换
 
