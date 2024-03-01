@@ -44,7 +44,7 @@ $$(A_V+B_W)(\ket{v}+\ket{w})=A_V\ket{v}+B_W\ket{w}.$$
 
 ### 线性空间的张量积
 
-两个线性空间不仅可以相加，还可以「相乘」，称为 **张量积** $V\otimes W$。如果刚才的直和类比，我们可以写出张量积空间中的某些元素
+两个线性空间不仅可以相加，还可以「相乘」，称为 **张量积** $V\otimes W$。和刚才的直和类比，我们可以写出张量积空间中的某些元素
 
 $$\ket{v}\otimes\ket{w}\in V\otimes W.$$
 
@@ -86,7 +86,7 @@ $$X=\sum_{i,j}\ket{v_i}\braket{v_i|X|v_j}\bra{v_j}
 
 换句话说，$\ket{v_i}\bra{v_j}$ 实际上也是 $V$ 上算符空间 $\mathcal{L}(V)$ 的一组基。于是我们知道
 
-$$V\otimes V^\ast$$
+$$V\otimes V^\ast\cong\mathcal{L}(V)$$
 
 就是 $V$ 上的算符空间，或者说 $(1,1)$ 型张量构成的空间。
 
@@ -139,7 +139,7 @@ $$\ket{v_1}\otimes_S\ket{v_2}\otimes_S\cdots=\frac{1}{N}\sum_{\sigma\in S_n}\ket
 
 对于反称积，我们则希望对于任意两个矢量的交换都是反称的。换句话说，任意交换两个矢量都会使结果多一个负号
 
-$$\ket{v_1}\wedge\ket{v_2}\Big(\cdots\Big)=-\ket{v_2}\wedge\ket{v_1}\Big(\cdots\Big).$$
+$$\ket{v_1}\wedge\ket{v_2}\wedge\Big(\cdots\Big)=-\ket{v_2}\wedge\ket{v_1}\wedge\Big(\cdots\Big).$$
 
 这样一来，我们就需要给每一种可能的排序规定一个正负号 $\mathrm{sgn}(\sigma)$，每交换两个矢量，正负号就会改变一次。举例来说，如果规定
 
@@ -166,9 +166,9 @@ $$\ket{v_1}\wedge\ket{v_2}\wedge\cdots=\frac{1}{N}\sum_{\sigma\in S_n}\mathrm{sg
 
 > 在这一小节中，我们直接用字母代表矢量，而暂时不再使用狄拉克记号或爱因斯坦记号。
 
-如果将 $V^{\otimes 0}$ 定义为底数域[^field]，那么我们定义 **张量代数** 为
+如果用 $V^{\otimes 0}$ 来表示底数域[^field]，那么我们就可以定义 **张量代数** 为
 
-$$T^\bullet V=\bigoplus_{n\geqslant 0}V^{\otimes n}.$$
+$$V^\bullet=\bigoplus_{n\geqslant 0}V^{\otimes n}.$$
 
 其中乘法就是简单的张量积。
 
@@ -180,7 +180,7 @@ $$\wedge^\bullet V=\bigoplus_{n\geqslant 0}V^{\wedge n}.$$
 
 格拉斯曼代数中的元素通常被称为 **格拉斯曼数**（Grassmann number），它们具有形式
 
-$$z=c_0+\sum_ic_i\theta_i+\sum_{i,j}c_{ij}\theta_i\theta_j+\cdots,$$
+$$z=c_0+\sum_ic_i\theta_i+\sum_{i<j}c_{ij}\theta_i\theta_j+\cdots,$$
 
 其中 $\theta_i\in V$ 表示 $V$ 中的矢量，而系数 $c$ 通常是复数。另外，在讨论格拉斯曼数时通常省略外积的符号 $\wedge$。
 
@@ -204,6 +204,6 @@ $$(\theta_i\theta_j)z=z(\theta_i\theta_j).$$
 [^sameElem]: 注意到，鉴于之前形式和的做法，实际上诸如 $\ket{v}$ 其实是空间 $V$ 中的矢量。但我们在这里简单地认为它代表直和空间中的 $\ket{v}+0_W$。
 [^commute]: 由于我们已经见过非交换的乘法了，这里的乘法不满足交换律大家应该也是可以接受的吧
 [^bilinear]: 实际上满足双线性性的结构有很多，例如实空间上的内积。一种更数学的定义张量积的方式就是 **所有这样的双线性结构中最大的一个**。这一定义的好处在于不需要关注具体的某组基，在物理上这种性质称为 **协变**。
-[^tensor]: 或者说 $\otimes$ 为什么要叫做张量积
+[^tensor]: 或者反过来说，这就是为什么 $\otimes$ 要叫做张量积
 [^field]: 即实数域 $\mathbb{R}$ 或复数域 $\mathbb{C}$
 [^antiComm]: 即交换会多一个负号
