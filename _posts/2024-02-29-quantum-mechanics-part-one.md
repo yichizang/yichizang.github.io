@@ -120,9 +120,9 @@ $$
 $$
 \sigma^x=\begin{pmatrix}
 0&1\\1&0
-\end{pmatrix},\quad\sigma^x=\begin{pmatrix}
+\end{pmatrix},\quad\sigma^y=\begin{pmatrix}
 0&i\\-i&0
-\end{pmatrix},\quad\sigma^x=\begin{pmatrix}
+\end{pmatrix},\quad\sigma^z=\begin{pmatrix}
 1&0\\0&-1
 \end{pmatrix}.
 $$
@@ -184,7 +184,7 @@ $$
 >
 > $$\braket{\psi|\psi}=1,$$
 >
-> 即都是归一化的。
+> 即都是归一化的[^uni]。
 {: .prompt-info }
 
 由于可观测量都是厄米算符，根据线性代数所学，它的本征态 $\{\ket{a_i}\}$ 可以组成希尔伯特空间的一组正交归一的基，这样一来我们就可以把空间中的所有态在这组基下展开
@@ -317,6 +317,29 @@ $$
 \braket{x|\psi}=\int_{-\infty}^\infty\mathrm{d}\xi\,\psi(\xi)\braket{x|\xi}=\int_{-\infty}^\infty\mathrm{d}\xi\,\psi(\xi)\delta(x-\xi)=\psi(x).
 $$
 
+> 注意到，这里的 $\ket{x}$ 似乎就不满足我们刚刚提到的归一化条件。一种处理方法是置之不理，因为除此之外一切都是自洽的。另一种方法是认为，我们无法将一个微观粒子的空间坐标 *无限精准* 地测量出来，因此有意义的物理态实际上是带有一个小展宽的
+>
+> $$\ket{x^{(\Delta)}}=\frac{1}{\sqrt{2\Delta}}\int_{x-\Delta}^{x+\Delta}\mathrm{d}\xi\,\ket{\xi}.$$
+>
+> 这样的态就满足归一化条件了。
+{: .prompt-tip }
+
+#### 波粒二象性
+
+所谓「波粒二象性」，实际上就是测量理论的推论。从一个波函数到另一个波函数的跃迁振幅给出
+
+$$
+\begin{aligned}
+\braket{\phi|\psi}=&\int\mathrm{d}x\int\mathrm{d}\xi\,\bra{x}\phi^\ast(x)\psi(\xi)\ket{\xi}\\
+=&\int\mathrm{d}x\int\mathrm{d}\xi\,\phi^\ast(x)\psi(\xi)\delta(x-\xi)\\
+=&\int\mathrm{d}x\,\phi^\ast(x)\psi(x).
+\end{aligned}
+$$
+
+我们刚才提过，微观粒子的空间坐标无法无限精确地测出来，因此假设我们测量仪器的展宽是 $2\Delta$，实验上就会发现，微观粒子由原来的波函数状态 $\ket{\psi}$ 坍缩到了某个确定的 $\ket{x^{(\Delta)}}$ 上。此时，微观粒子新的波函数全部聚集在 $x$ 附近，看起来就好像一个粒子一样。
+
+这就是波粒二象性在说的事。
+
 ## 脚注
 
 [^spinHalf]: 暂时不用知道为什么叫这个名字，只需要知道它代表一种自旋的特性就可以了
@@ -324,4 +347,5 @@ $$
 [^herm]: 可观测量是厄米算符就保证了它的本征值（也即测量值）是实数
 [^check]: 读者可以自行验证
 [^mat]: 尽管如此，这只对自旋这类希尔伯特空间维度有限的体系成立，对于后面将会看到的无穷维希尔伯特空间体系，矩阵本身甚至都无法定义
+[^uni]: 打脸的是，很快就会看到反例
 [^int]: 这里的积分是全空间上的定积分而不是不定积分，我只是懒得打上下标
