@@ -115,7 +115,13 @@ $$\begin{aligned}
 c\ket{a}\quad&\leftrightarrow\quad\bra{a}c^*,\quad c\in\mathbb{C}.
 \end{aligned}$$
 
-由于这样对应的存在，$\braket{a\|b}$ 也可以被看作 $\ket{a}$ 和 $\ket{b}$ 的内积。与实空间内积不同的是，这个内积是 **共轭对称** 的
+由于这样对应的存在，$\braket{a\|b}$ 也可以被看作 $\ket{a}$ 和 $\ket{b}$ 的内积。由于内积是线性的，就有
+
+$$
+\braket{a|c|b}=\bra{a}(c\ket{b})=c\braket{a|b},\quad c\in\mathbb{C}.
+$$
+
+与实空间内积不同的是，这个内积是 **共轭对称** 的
 
 $$\braket{a|b}=\braket{b|a}^*.$$
 
@@ -202,13 +208,13 @@ $$(X^{-1})^{-1}=X.$$
 
 对于一组正交归一的基，更有趣的一个算符是
 
-$$\sum_i\ket{a_i}\bra{a_i}.$$
+$$\sum_i\ket{a_i}\bra{a_i}=1.$$
 
-这实际上就是单位算符，因此，可以把它插入到各种地方[^identity]，这被称为「resolution of identity」，*我不知道它的中文名叫啥*。它的伴随自然是它本身。
+这实际上就是单位算符，因此，可以把它插入到各种地方[^identity]，这被称为 **单位分解**（resolution of identity）。它的伴随自然是它本身。
 
 ### 算符与矩阵
 
-通过「resolution of identity」，我们会发现
+通过单位分解，我们会发现
 
 $$\ket{x}=\sum_i\ket{a_i}\braket{a_i|x}=\sum_ix^i\ket{a_i},$$
 

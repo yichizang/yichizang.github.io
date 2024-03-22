@@ -10,6 +10,9 @@ math: true
 
 ### 共形变换定义
 
+> 对于共形变换严格的定义，例如是否改变度规或者度规分量，以及不同流形之间的映射，我目前还没有完全明白，网上关于这个问题的讨论似乎也没有统一的结论。暂时搁浅此事。
+{: .prompt-info }
+
 简单来说，**共形场论** 即是在相对论性量子场论基础上加上额外的对称性：**缩放对称性** 和 **特殊共形对称性**。
 
 为了了解这些新的对称性，我们需要知道 **共形变换**。这是一种坐标变换 $x\mapsto x'$，其无穷小形式为
@@ -139,7 +142,136 @@ D=J^{d+1,d+2},&\quad K^\mu=J^{\mu,d+1}-J^{\mu,d+2}.
 
 只要计算出 $x^{\prime\prime\prime}_2$ 的值，即可完成这个变换。
 
+## 经典场论中的共形对称性
+
+### 自由场
+
+以自由场为例，我们可以写出一个共形不变的作用量
+
+$$
+S=\int\mathrm{d}^dx\left[-\frac{1}{2}\partial_\mu\phi\partial^\mu\phi\right].
+$$
+
+其中，设自由场在无穷小共形变换下变换为
+
+$$
+\phi(x)\mapsto e^{\Delta\sigma(x)}\phi(x+\epsilon),
+$$
+
+其中 $\sigma(x)=\partial_\mu\epsilon^\mu/d$。$\Delta$ 是一个与场有关的参数，在我们的例子中可以算出，为了使得作用量具有共形不变性，有 $\Delta=(d-2)/2$。
+
+将场的变换展开为
+
+$$
+\phi(x)\mapsto\left[1+\frac{d-2}{2d}\partial_\mu\epsilon^\mu+\epsilon^\mu\partial_\mu\right]\phi(x).
+$$
+
+可以发现作用量的变分是一个全导数
+
+$$
+\delta\mathcal{L}=\partial_\mu\left(-\frac{1}{2}\epsilon^\mu\partial_\nu\phi\partial^\nu\phi-\frac{d-2}{2d}\partial_\nu\epsilon^\nu\phi\partial^\mu\phi\right).
+$$
+
+### 诺特定理
+
+> 回顾一下，**诺特定理** 说的是：对于一个场的连续对称性
+>
+> $$\phi\mapsto\delta_\epsilon\phi,\quad\mathcal{L}\mapsto\mathcal{L}+\partial_\mu\Lambda^\mu_\epsilon,$$
+>
+> 系统在壳时具有如下守恒流
+>
+> $$J^\mu_\epsilon=\Lambda^\mu_\epsilon-\frac{\partial\mathcal{L}}{\partial(\partial_\mu\phi)}\delta_\epsilon\phi.$$
+{: .prompt-info }
+
+对于共形变换，可以算出这个守恒流是
+
+$$
+J^\mu_\epsilon=\epsilon_\nu\left(\partial^\mu\phi\partial^\nu\phi-\frac{1}{2}g^{\mu\nu}\partial_\rho\phi\partial^\rho\phi\right)=\epsilon_\nu T^{\mu\nu}_c.
+$$
+
+其中括号中的部分就是正则能动张量。
+
+> 但是如果你真的计算一下，就会发现这个守恒流的在壳全导数
+>
+> $$\partial_\mu J^\mu_\epsilon=-\frac{d-2}{2}\sigma\partial_\mu\phi\partial^\mu\phi$$
+>
+> 不为零。
+{: .prompt-warning }
+
+这是因为上文所说的 *诺特第一定理* 只有在 $\delta_\epsilon$ 不显式依赖于坐标 $x$ 的时候才成立，此时 $\partial_\mu$ 和 $\delta_\epsilon$ 对易。
+
+对于这里的情况，我们可以定义一个新的能动张量
+
+$$
+T^{\mu\nu}=T^{\mu\nu}_c+\frac{d-2}{2(d-1)}(\partial^\mu\partial^\nu-g^{\mu\nu}\partial^2)\phi^2.
+$$
+
+这是一个 *无迹* 的能动张量，可以证明，将它代入刚才的 $J^\mu_\epsilon$，得到的就是一个正确的守恒流。
+
+> 事实上，任何一个局域的共形场论都具有一个无迹的能动张量。
+{: .prompt-info }
+
+通过对守恒流的时间分量积分，我们可以得到对应的 **守恒荷**。共形变换中的四种守恒荷给出
+
+$$
+\begin{aligned}
+P^\mu=&-i\int\mathrm{d}^{d-1}x~T^{0\mu}(x)\\
+M^{\mu\nu}=&-i\int\mathrm{d}^{d-1}x\left[x^\mu T^{0\nu}(x)-x^\nu T^{0\mu}(x)\right]\\
+D=&-i\int\mathrm{d}^{d-1}x~x_\mu T^{0\mu}(x)\\
+K^\mu=&-i\int\mathrm{d}^{d-1}x\left[2x^\mu x_\nu T^{0\nu}(x)-x^2T^{0\mu}(x)\right].
+\end{aligned}
+$$
+
+### 包含外源的形式
+
+如果在作用量中加入一项外部的源 $J(x)$
+
+$$
+S_{\text{source}}=\int\mathrm{d}^dx~J(x)\phi(x),
+$$
+
+运动方程就会变为
+
+$$
+\partial^2\phi+J=0.
+$$
+
+此时原本能动张量的导数也会变得非零
+
+$$
+\partial_\nu T^{\mu\nu}=-J\partial^\mu\phi.
+$$
+
+如果考虑一个局域的源
+
+$$
+J(x)=\delta^{(d)}(x-x_\ast),
+$$
+
+那么
+
+$$
+\partial_\nu T^{\mu\nu}(x)=-\delta^{(d)}(x-x_\ast)\partial^\mu\phi(x).
+$$
+
+我们可以在这个局域的源前后[^beforeAfter]分别考察动量守恒荷，即
+
+$$
+P_\pm^\mu=-i\int_{x^0\gtrless x^0_\ast}\mathrm{d}^{d-1}x~T^{0\mu}(x).
+$$
+
+则在这两个等时面之间的动量变化就给出 $P_\ast^\mu=P_+^\mu-P_-^\mu$。我们可以将这两个积分曲面形变为一个包住 $x_\ast$ 点的超曲面[^deform]，再通过斯托克斯公式将这个积分变为对时空区域内的积分
+
+$$
+P_\ast^\mu=-i\int_{\partial\Sigma}\mathrm{d}^{d-1}x~n_\nu T^{\mu\nu}=-i\int_\Sigma\mathrm{d}^dx~\partial_\nu T^{\mu\nu}=i\partial^\mu\phi(x_\ast).
+$$
+
+> 当我们在讨论 $P^\mu$ 和某个局域算符 $\phi(x)$ 之间的对易关系时，实际上我们就是在做以上的事：考察某个包围住局域算符的超曲面，以及在其上的动量算符积分。由于这个动量算符的表现和具体 $\Sigma$ 的形状无关，它被称为 **拓扑算符**。
+{: .prompt-tip }
+
 ## 脚注
 
 [^flat]: 显然要求空间（时空）也是平直的，度规平直则意味着 $g_{\mu\nu}$ 不依赖于坐标
 [^proof]: 证明留做习题
+[^beforeAfter]: 即考虑 $x^0>x^0_\ast$ 和 $x^0<x^0_\ast$ 的两个等时面
+[^deform]: 这是因为在源以外的地方都满足动量守恒
