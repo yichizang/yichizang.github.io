@@ -11,8 +11,8 @@ tags: [math]
 
 红绿灯的数字显示由 7 条 LED 灯实现，可以显示 0 到 9 的数字。
 
-![light dig](/images/digits.png){: .light .w-50 width="2806" height="1253"}
-![dark dig](/images/digits_dark.png){: .dark .w-50 width="2806" height="1253"}
+![light dig](/images/digits.png){: .light .w width="1403" height="627"}
+![dark dig](/images/digits_dark.png){: .dark .w width="1403" height="627"}
 _红绿灯使用的数字码_
 
 在不同的显示设置下，它还可以用于显示字母 A 到 H，以此表示超过 99 秒的等待时间[^nanjing]。
@@ -23,9 +23,7 @@ _红绿灯使用的数字码_
 
 对于每一位数字，有 10 中可能状态需要判断。为此，我们至少需要 4 条正常工作的灯条。这是因为每条灯条只有「**亮**」和「**灭**」两种状态，于是
 
-$$
-2^3<10<2^4,
-$$
+$$2^3\gt10\gt2^4,$$
 
 所以，3 条灯条是不够的。
 
@@ -33,8 +31,8 @@ $$
 
 最简单的一种判断方式就是：如果两个数字码之间 *只相差一根灯条*，那么这根灯条就必须是好的，否则我们将无法区分它们。我们可以将这样的数字码列出来。
 
-![light com](/images/digit_compare.png){: .light .w-50 width="2806" height="1279"}
-![dark com](/images/digit_compare_dark.png){: .dark .w-50 width="2806" height="1279"}
+![light com](/images/digit_compare.png){: .light .w width="1403" height="640"}
+![dark com](/images/digit_compare_dark.png){: .dark .w width="1403" height="640"}
 _相差一根灯条的各个数字码_
 
 在这里，为了方便讨论，我们给每根灯条都标注了一个编号。可以发现，1、2、3、4、6 号灯条都必须是正常的，因此，至少需要 5 条正常工作的灯条，我们才能正确辨认出这 10 个数码，换言之，只有右下角的 5 号和 7 号灯条可以有出故障的余地。这个冗余显然比理论允许的最大值要小很多。
@@ -47,16 +45,14 @@ _相差一根灯条的各个数字码_
 
 同样从理论最值来说，我们发现只要两根就具有足够的信息量
 
-$$
-(2^2)^2=16>10.
-$$
+$$(2^2)^2=16\gt10.$$
 
 但这也只是理论的最值。
 
 用和刚才相似的思路，我们可以给出一些必须正常工作的灯条。例如：由于 0 和 6 相似，而 1 和 7 相似，则为了区分 (0,1) 和 (6,7)，3、4、6 号之中必须至少有一个正常工作的灯条。用这种方法，我们可以给出如下约束
 
-![light two](/images/two_dig.png){: .light .w-50 width="2806" height="1423"}
-![dark two](/images/two_dig_dark.png){: .dark .w-50 width="2806" height="1423"}
+![light two](/images/two_dig.png){: .light .w width="1403" height="712"}
+![dark two](/images/two_dig_dark.png){: .dark .w width="1403" height="712"}
 _几组例子给出的约束_
 
 从中不难发现，至少需要 3 根正常工作的灯条才能同时满足这些条件。因此，即使是在辨认两位数字的任务下，数字码的设计也同样缺乏足够的冗余。
