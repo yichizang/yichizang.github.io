@@ -22,3 +22,5 @@ package-lock.json
 assets/js/dist
 
 temp
+
+.DS_Store
