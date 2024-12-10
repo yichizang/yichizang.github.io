@@ -221,15 +221,15 @@ $$
 
 $$
 \begin{aligned}
-\hat{x}\,\hat{T}(a)\ket{x}&=\hat{x}\ket{x+a}=(x+a)\ket{x+a}\\
-\hat{T}(a)\hat{x}\ket{x}&=x\,\hat{T}(a)\ket{x}=x\ket{x+a}.
+\hat{x}\,\hat{T}(a)\ket{x}&=\hat{x}\ket{x+a}=(x+a)\ket{x+a}=(x+a)\hat{T}(a)\ket{x}\\
+\hat{T}(a)\hat{x}\ket{x}&=x\,\hat{T}(a)\ket{x}.
 \end{aligned}
 $$
 
-注意到，这个结果对任意 $\ket{x}$ 都成立，而 $\ket{x}$ 构成希尔伯特空间的基。这就意味着[^commutator]
+注意到，这个结果对任意 $\ket{x}$ 都成立，而 $\ket{x}$ 构成希尔伯特空间的基。这就意味着
 
 $$
-[\hat{x},\hat{T}(a)]=\hat{x}\hat{T}(a)-\hat{T}(a)\hat{x}=a.
+[\hat{x},\hat{T}(a)]=\hat{x}\hat{T}(a)-\hat{T}(a)\hat{x}=a\hat{T}(a).
 $$
 
 ### 平移生成元
@@ -267,7 +267,7 @@ $$
 T(a)\approx 1_{\mathcal{H}}-ika.
 $$
 
-从 $x$ 和 $T(a)$ 的对易关系出发，我们立刻可以得到
+从 $x$ 和 $T(a)$ 的对易关系出发，我们立刻可以得到[^commId]
 
 $$
 [x,T(a)]=-ia[x,k]=a.
@@ -306,7 +306,7 @@ $$
 这与经典力学中的 **泊松括号** 之间存在某种对应关系
 
 $$
-\{x,p\}=1\quad\leftrightarrow\quad\frac{1}{i\hbar}[x,p].
+\{x,p\}=1\quad\leftrightarrow\quad\frac{1}{i\hbar}[x,p]=1_{\mathcal{H}}.
 $$
 
 这样的对应关系实际上是普适的[^lieBraket]。这种对应关系也可以作为我们定义动量算符的动机之一。
@@ -391,7 +391,7 @@ $$
 -i\hbar\partial_x\braket{x|p}=\braket{x|\hat{p}|p}=p\braket{x|p}.
 $$
 
-将上式作为一个关于 $\braket{x|p}$ 的微分方程，可以解出
+将上式作为一个关于 $\braket{x\|p}$ 的微分方程，可以解出
 
 $$
 \braket{x|p}=e^{ipx / \hbar}.
@@ -421,7 +421,7 @@ $$
 [^genFunc]: 更准确地说：$\bra{x}$ 应该被理解为某种 *只能作为左矢/对偶矢量* 的东西，对于无穷维线性空间，不能保证每个矢量和对偶矢量的一一对应。从泛函分析的角度说，如果我们考虑函数空间作为希尔伯特空间的实现，则 $\delta$ 函数只能定义在广义函数空间上（即函数空间的线性泛函空间）
 [^contFunc]: 更严格的定义需要考虑诸如平方可积的性质，我们暂且不论
 [^calFont]: 这里花体和斜体用来表示这是同一个算符的不同实现，接下来我们就会看到一些例子说明这点
-[^commutator]: 严格来说，这里等式右边应该是 $a$ 倍的单位算符
 [^infi]: 事实上，我们还没有严格定义算符的无穷求和，不过作为物理学家让我们暂时忽略这点。更严格的说法请参考关于李群和李代数的内容
-[^lieBraket]: 从某种角度来说，它们的一大共同点在于它们都是李括号
+[^commId]: 这里都保留到 $a$ 的一阶项，因此最右边实际上省略了单位算符
+[^lieBraket]: 从某种角度来说，它们的一大共同点在于它们都是李括号，这就是几何量子化的出发点
 [^local]: 可以从波函数的归一化条件看出
