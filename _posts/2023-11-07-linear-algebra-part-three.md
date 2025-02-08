@@ -165,6 +165,7 @@ $$\ket{v_1}\wedge\ket{v_2}\wedge\cdots=\frac{1}{N}\sum_{\sigma\in S_n}\mathrm{sg
 ### 张量代数与格拉斯曼代数
 
 > 在这一小节中，我们直接用字母代表矢量，而暂时不再使用狄拉克记号或爱因斯坦记号。
+{: .prompt-info }
 
 如果用 $V^{\otimes 0}$ 来表示底数域[^field]，那么我们就可以定义 **张量代数** 为
 
