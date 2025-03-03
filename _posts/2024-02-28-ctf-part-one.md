@@ -21,7 +21,7 @@ $$
 x^\mu\mapsto x^\mu+\epsilon^\mu(x).
 $$
 
-假设该变换保持线元 $\mathrm{d}l^2=g_{\mu\nu}\mathrm{d}x^\mu\mathrm{d}x^\nu$ 不变，并且变换前的度规是平直的[^flat]，则可以写出度规的无穷小变换
+假设该变换保持线元 $\mathrm{d}l^2=g\_{\mu\nu}\mathrm{d}x^\mu\mathrm{d}x^\nu$ 不变，并且变换前的度规是平直的[^flat]，则可以写出度规的无穷小变换
 
 $$
 \begin{aligned}
@@ -30,7 +30,7 @@ g'_{\mu\nu}=&g_{\sigma\lambda}\frac{\partial x^\sigma}{\partial x^\mu}\frac{\par
 \end{aligned}
 $$
 
-> 举例来说，如果要求 $g^\prime_{\mu\nu}=g_{\mu\nu}$，则可以得到约束方程
+> 举例来说，如果要求 $g^\prime\_{\mu\nu}=g\_{\mu\nu}$，则可以得到约束方程
 > 
 > $$(\partial_\mu\epsilon_\nu+\partial_\nu\epsilon_\mu)=0,$$
 > 
@@ -39,7 +39,7 @@ $$
 > $$\epsilon^\mu=a^\mu+\omega^\mu{}_\nu x^\nu.$$
 {: .prompt-tip }
 
-对于共形变换，我们要求 $g^\prime_{\mu\nu}=\Omega(x)g_{\mu\nu}$，将新的约束方程写为
+对于共形变换，我们要求 $g^\prime\_{\mu\nu}=\Omega(x)g\_{\mu\nu}$，将新的约束方程写为
 
 $$
 \partial_\mu\epsilon_\nu+\partial_\nu\epsilon_\mu=2\sigma(x) g_{\mu\nu},\quad\Omega(x)=e^{-2\sigma(x)}\approx 1-2\sigma(x).
@@ -51,7 +51,7 @@ $$
 (d-1)\Box\sigma=0,\quad(2-d)\partial_\mu\partial_\nu\sigma=g_{\mu\nu}\Box\sigma,\quad\partial_\mu\epsilon^\mu=\sigma d.
 $$
 
-于是我们知道，在 $d>2$ 的情况下，有 $\partial_\mu\partial_\nu\sigma=0$，则
+于是我们知道，在 $d>2$ 的情况下，有 $\partial\_\mu\partial\_\nu\sigma=0$，则
 
 $$
 \epsilon^\mu=a^\mu+\omega^\mu{}_\nu x^\nu+\lambda x^\mu+2(b\cdot x)x^\mu-x^2b^\mu.
@@ -67,7 +67,7 @@ $$
 x^\pm=\frac{x^0\pm x^1}{2},
 $$
 
-则方程变为 $\partial_+\partial_-\sigma=0$，任意形如
+则方程变为 $\partial\_+\partial\_-\sigma=0$，任意形如
 
 $$
 \sigma=f(x^+)+g(x^-)
@@ -83,7 +83,7 @@ $$
 >
 > $$f(x)\mapsto f(x+a)=f(x)+a^\mu\partial_\mu f(x).$$
 >
-> 这样一来，可以将平移生成算符写为 $P_\mu=i\partial_\mu$。
+> 这样一来，可以将平移生成算符写为 $P\_\mu=i\partial\_\mu$。
 {: .prompt-info }
 
 用这种方式，可以写出现有的四种共形变换的微分算符表示：
@@ -92,8 +92,8 @@ $$
 |---|---|---|
 | 平移 | $P^\mu=i\partial^\mu$ | $d$ |
 | 转动 | $M^{\mu\nu}=i(x^\mu\partial^\nu-x^\nu\partial^\mu)$ | $d(d-1)/2$ |
-| 缩放 | $D=ix^\mu\partial_\mu$ | $1$ |
-| 特殊共形变换 | $K^\mu=i(2x^\mu x^\nu\partial_\nu-x^2\partial^\mu)$ | $d$ |
+| 缩放 | $D=ix^\mu\partial\_\mu$ | $1$ |
+| 特殊共形变换 | $K^\mu=i(2x^\mu x^\nu\partial\_\nu-x^2\partial^\mu)$ | $d$ |
 
 总共的自由度数量就是 $(d+1)(d+2)/2$。
 
@@ -125,7 +125,7 @@ D=J^{d+1,d+2},&\quad K^\mu=J^{\mu,d+1}-J^{\mu,d+2}.
 | 变换名称 | 有限变换 | 不动点 |
 |---|---|---|
 | 平移 | $x^\mu\mapsto x^\mu+a^\mu$ | 无 |
-| 转动 | $x^\mu\mapsto \Lambda^\mu{}_\nu x^\nu$ | 原点和无穷远点 |
+| 转动 | $x^\mu\mapsto \Lambda^\mu{}\_\nu x^\nu$ | 原点和无穷远点 |
 | 缩放 | $x^\mu\mapsto \lambda x^\mu$ | 原点和无穷远点 |
 | 特殊共形变换 | $x^\mu\mapsto\dfrac{x^\mu-x^2b^\mu}{1-2b\cdot x+b^2x^2}$ | 原点 |
 
@@ -133,14 +133,14 @@ D=J^{d+1,d+2},&\quad K^\mu=J^{\mu,d+1}-J^{\mu,d+2}.
 - 无穷远点 $\infty$ 被映射到 $-b^\mu/b^2$；
 - $b^\mu/b^2$ 被映射到无穷远点。
 
-有趣的一点是，共形变换可以将任意三个点 $(x_1,x_2,x_3)$ 变换到任意另外三个点 $(x'_1,x'_2,x'_3)$：
-1. 首先将 $x_1$ 平移至原点；
-1. 利用特殊共形变换，将 $x_3$ 推至无穷远点，此时三点变为 $(0,x^{\prime\prime}_2,\infty)$；
-1. 用转动和缩放将 $x^{\prime\prime}_2$ 转动至新的一点 $x^{\prime\prime\prime}_2$；
-1. 用特殊共形变换，将无穷远点变回 $x'_3-x'_1$；
-1. 再次平移，将原点移至 $x'_1$。
+有趣的一点是，共形变换可以将任意三个点 $(x\_1,x\_2,x\_3)$ 变换到任意另外三个点 $(x'\_1,x'\_2,x'\_3)$：
+1. 首先将 $x\_1$ 平移至原点；
+1. 利用特殊共形变换，将 $x\_3$ 推至无穷远点，此时三点变为 $(0,x^{\prime\prime}\_2,\infty)$；
+1. 用转动和缩放将 $x^{\prime\prime}\_2$ 转动至新的一点 $x^{\prime\prime\prime}\_2$；
+1. 用特殊共形变换，将无穷远点变回 $x'\_3-x'\_1$；
+1. 再次平移，将原点移至 $x'\_1$。
 
-只要计算出 $x^{\prime\prime\prime}_2$ 的值，即可完成这个变换。
+只要计算出 $x^{\prime\prime\prime}\_2$ 的值，即可完成这个变换。
 
 ## 共形对称性
 
@@ -158,7 +158,7 @@ $$
 \phi(x)\mapsto e^{\Delta\sigma(x)}\phi(x+\epsilon),
 $$
 
-其中 $\sigma(x)=\partial_\mu\epsilon^\mu/d$。$\Delta$ 是一个与场有关的参数，在我们的例子中可以算出，为了使得作用量具有共形不变性，有 $\Delta=(d-2)/2$。
+其中 $\sigma(x)=\partial\_\mu\epsilon^\mu/d$。$\Delta$ 是一个与场有关的参数，在我们的例子中可以算出，为了使得作用量具有共形不变性，有 $\Delta=(d-2)/2$。
 
 将场的变换展开为
 
@@ -198,7 +198,7 @@ $$
 > 不为零。
 {: .prompt-warning }
 
-这是因为上文所说的 *诺特第一定理* 只有在 $\delta_\epsilon$ 不显式依赖于坐标 $x$ 的时候才成立，此时 $\partial_\mu$ 和 $\delta_\epsilon$ 对易。
+这是因为上文所说的 *诺特第一定理* 只有在 $\delta\_\epsilon$ 不显式依赖于坐标 $x$ 的时候才成立，此时 $\partial\_\mu$ 和 $\delta\_\epsilon$ 对易。
 
 对于这里的情况，我们可以定义一个新的能动张量
 
@@ -206,7 +206,7 @@ $$
 T^{\mu\nu}=T^{\mu\nu}_c+\frac{d-2}{2(d-1)}(\partial^\mu\partial^\nu-g^{\mu\nu}\partial^2)\phi^2.
 $$
 
-这是一个 *无迹* 的能动张量，可以证明，将它代入刚才的 $J^\mu_\epsilon$，得到的就是一个正确的守恒流。
+这是一个 *无迹* 的能动张量，可以证明，将它代入刚才的 $J^\mu\_\epsilon$，得到的就是一个正确的守恒流。
 
 > 事实上，任何一个局域的共形场论都具有一个无迹的能动张量。
 {: .prompt-info }
@@ -260,7 +260,7 @@ $$
 P_\pm^\mu=-i\int_{x^0\gtrless x^0_\ast}\mathrm{d}^{d-1}x~T^{0\mu}(x).
 $$
 
-则在这两个等时面之间的动量变化就给出 $P_\ast^\mu=P_+^\mu-P_-^\mu$。我们可以将这两个积分曲面形变为一个包住 $x_\ast$ 点的超曲面[^deform]，再通过斯托克斯公式将这个积分变为对时空区域内的积分
+则在这两个等时面之间的动量变化就给出 $P\_\ast^\mu=P\_+^\mu-P\_-^\mu$。我们可以将这两个积分曲面形变为一个包住 $x\_\ast$ 点的超曲面[^deform]，再通过斯托克斯公式将这个积分变为对时空区域内的积分
 
 $$
 P_\ast^\mu=-i\int_{\partial\Sigma}\mathrm{d}^{d-1}x~n_\nu T^{\mu\nu}=-i\int_\Sigma\mathrm{d}^dx~\partial_\nu T^{\mu\nu}=i\partial^\mu\phi(x_\ast).
@@ -271,7 +271,7 @@ $$
 
 ### 量子版本
 
-从路径积分量子化的角度，上文提到的积分操作 $P_\ast=P_+-P_-$ 就可以被看作对易子
+从路径积分量子化的角度，上文提到的积分操作 $P\_\ast=P\_+-P\_-$ 就可以被看作对易子
 
 $$
 [P_\mu,\phi(x)]=i\partial_\mu\phi(x).
@@ -279,7 +279,7 @@ $$
 
 ## 脚注
 
-[^flat]: 显然要求空间（时空）也是平直的，度规平直则意味着 $g_{\mu\nu}$ 不依赖于坐标
+[^flat]: 显然要求空间（时空）也是平直的，度规平直则意味着 $g\_{\mu\nu}$ 不依赖于坐标
 [^proof]: 证明留做习题
-[^beforeAfter]: 即考虑 $x^0>x^0_\ast$ 和 $x^0<x^0_\ast$ 的两个等时面
+[^beforeAfter]: 即考虑 $x^0>x^0\_\ast$ 和 $x^0<x^0\_\ast$ 的两个等时面
 [^deform]: 这是因为在源以外的地方都满足动量守恒
