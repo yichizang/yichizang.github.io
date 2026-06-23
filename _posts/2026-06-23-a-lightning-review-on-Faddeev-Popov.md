@@ -102,7 +102,7 @@ $$Z = \int r\mathrm{d}r\mathrm{d}\theta\, \Delta_{FP}\int\mathrm{d}\alpha\, \del
 
 出于和之前相同的论证, $\alpha$ 的积分可以被提出来, 得到规范群体积 $V_G$. 同时我们可以用上一节相同的办法处理 $\delta$ 函数. 于是配分函数就可以写为
 
-$$Z = V_G \int r\mathrm{d}r\mathrm{d}\theta\, \Delta_{FP}\, \mathrm{e}^{-\frac{1}{2\xi}r^2\sin^2\theta} S(r,\theta),$$
+$$Z = \frac{V_G}{\sqrt{2\pi\xi}} \int r\mathrm{d}r\mathrm{d}\theta\, \Delta_{FP}\, \mathrm{e}^{-\frac{1}{2\xi}r^2\sin^2\theta} S(r,\theta),$$
 
 但此时 $\Delta_{FP}$ 不是一个能被提到积分号外的常数. 为了解决这个问题, 我们利用如下 Grassmann 数的高斯积分公式
 
@@ -110,7 +110,7 @@ $$\Delta = \int\mathrm{d}c\mathrm{d}\bar{c}\, \mathrm{e}^{-c\Delta\bar{c}},$$
 
 其中 $c$ 和 $\bar{c}$ 都是反对易的 Grassmann 数. 于是我们最终获得了如下的配分函数
 
-$$Z = V_G \int r\mathrm{d}r\mathrm{d}\theta\,\mathrm{d}c\mathrm{d}\bar{c}\, \exp\left\{-\left(L(r,\theta) + \frac{1}{2\xi}r^2\sin^2\theta + c\bar{c}\, |r\cos\theta|\right)\right\}.$$
+$$Z = \frac{V_G}{\sqrt{2\pi\xi}} \int r\mathrm{d}r\mathrm{d}\theta\,\mathrm{d}c\mathrm{d}\bar{c}\, \exp\left\{-\left(L(r,\theta) + \frac{1}{2\xi}r^2\sin^2\theta + c\bar{c}\, |r\cos\theta|\right)\right\}.$$
 
 我们会发现, 这里相当于引入了一对费米子场 (反对易场) $c$ 和 $\bar{c}$. 尽管它们有动力学, 但它们只是来自求解过程中的数学技巧, 因此它们应当是非物理的. 这一对费米子场称为鬼场.
 
