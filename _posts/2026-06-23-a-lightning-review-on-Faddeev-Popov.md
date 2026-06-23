@@ -94,7 +94,7 @@ $$Z = V_G \frac{1}{2\pi} \int r\mathrm{d}r\mathrm{d}\theta\,\mathrm{d}\omega\,\e
 
 $$1 = \Delta_{FP} \int\mathrm{d}\alpha\, \delta(r\sin\theta + \alpha\, r\cos\theta),$$
 
-其中 $\Delta_{FP} = \left|\frac{\partial}{\partial\alpha}(r\sin\theta + \alpha\, r\cos\theta)\right| = |r\cos\theta|$ 称为 Faddeev-Popov 行列式[^determinant].
+其中 $\Delta_{FP} = \left\|\frac{\partial}{\partial\alpha}(r\sin\theta + \alpha\, r\cos\theta)\right\| = \|r\cos\theta\|$ 称为 Faddeev-Popov 行列式[^determinant].
 
 把这个规范固定插入配分函数中就会得到
 
@@ -118,4 +118,4 @@ $$Z = V_G \int r\mathrm{d}r\mathrm{d}\theta\,\mathrm{d}c\mathrm{d}\bar{c}\, \exp
 
 [^action]: 这里的作用量与平时的定义略有不同.
 [^gauge]: 这个规范变换会把问题大大复杂化, 我们使用它只是为了展示鬼场是怎么出现并且和物理场耦合的. 在通常的非阿贝尔规范理论中鬼场的出现比这里自然很多.
-[^determinant]: 如果是一个更高维的版本 $\int\mathrm{d}\vec{\alpha}\,\delta(F_{\vec{\alpha}}(\vec{v}))$, 那这里的 $\Delta_{FP}$ 就是 $|\partial F/\partial\vec{\alpha}|$ 的雅可比行列式. 这就是为什么它称为 **行列式**. 这时我们只需要用高维的 Grassmann 数高斯积分公式就能得到对应的鬼场构造.
+[^determinant]: 如果是一个更高维的版本 $\int\mathrm{d}\vec{\alpha}\,\delta(F_{\vec{\alpha}}(\vec{v}))$, 那这里的 $\Delta_{FP}$ 就是 $\|\partial F/\partial\vec{\alpha}\|$ 的雅可比行列式. 这就是为什么它称为 **行列式**. 这时我们只需要用高维的 Grassmann 数高斯积分公式就能得到对应的鬼场构造.
