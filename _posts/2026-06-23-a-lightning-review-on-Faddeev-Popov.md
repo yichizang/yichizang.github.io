@@ -90,11 +90,11 @@ $$Z = V_G \frac{1}{2\pi} \int r\mathrm{d}r\mathrm{d}\theta\,\mathrm{d}\omega\,\e
 
 ## 鬼场
 
-让我们换一种方式思考我们的构造, 事实上我们的作用量还存在一种等价但又有一些不同的规范变换[^gauge], 即 $y\mapsto y+\alpha x$. 这启发我们插入一个略微不同的规范固定
+让我们换一种方式思考我们的构造, 事实上我们的作用量还存在一种等价但又有一些不同的规范变换[^gauge], 即 $y\mapsto y+\alpha \mathrm{e}^x$. 这启发我们插入一个略微不同的规范固定
 
-$$1 = \Delta_{FP} \int\mathrm{d}\alpha\, \delta(r\sin\theta + \alpha\, r\cos\theta),$$
+$$1 = \Delta_{FP} \int\mathrm{d}\alpha\, \delta(r\sin\theta + \alpha\, \mathrm{e}^{r\cos\theta}),$$
 
-其中 $\Delta_{FP} = \left\|\frac{\partial}{\partial\alpha}(r\sin\theta + \alpha\, r\cos\theta)\right\| = \|r\cos\theta\|$ 称为 Faddeev-Popov 行列式[^determinant].
+其中 $\Delta_{FP} = \left\|\frac{\partial}{\partial\alpha}(r\sin\theta + \alpha\, \mathrm{e}^{r\cos\theta})\right\| = \mathrm{e}^{r\cos\theta}$ 称为 Faddeev-Popov 行列式[^determinant].
 
 把这个规范固定插入配分函数中就会得到
 
@@ -110,7 +110,7 @@ $$\Delta = \int\mathrm{d}c\mathrm{d}\bar{c}\, \mathrm{e}^{-c\Delta\bar{c}},$$
 
 其中 $c$ 和 $\bar{c}$ 都是反对易的 Grassmann 数. 于是我们最终获得了如下的配分函数
 
-$$Z = \frac{V_G}{\sqrt{2\pi\xi}} \int r\mathrm{d}r\mathrm{d}\theta\,\mathrm{d}c\mathrm{d}\bar{c}\, \exp\left\{-\left(L(r,\theta) + \frac{1}{2\xi}r^2\sin^2\theta + c\bar{c}\, |r\cos\theta|\right)\right\}.$$
+$$Z = \frac{V_G}{\sqrt{2\pi\xi}} \int r\mathrm{d}r\mathrm{d}\theta\,\mathrm{d}c\mathrm{d}\bar{c}\, \exp\left\{-\left(L(r,\theta) + \frac{1}{2\xi}r^2\sin^2\theta + c\bar{c}\, \mathrm{e}^{r\cos\theta}\right)\right\}.$$
 
 我们会发现, 这里相当于引入了一对费米子场 (反对易场) $c$ 和 $\bar{c}$. 尽管它们有动力学, 但它们只是来自求解过程中的数学技巧, 因此它们应当是非物理的. 这一对费米子场称为鬼场.
 
