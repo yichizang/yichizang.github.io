@@ -94,19 +94,19 @@ $$Z = \frac{V_G}{2\pi} \int \mathrm{d}x\mathrm{d}y\,\mathrm{d}\omega\,\exp\left\
 
 在更一般的情况中, 假设规范变换是 $\vec{v}\mapsto \vec{v}\_\alpha = R(\alpha)\vec{v}$, 其中 $\alpha$ 是规范变换的参数. 我们希望选取规范固定 $F(\vec{v}) = \omega$. 和上一个例子中一样, 让我们考虑如下单位分解
 
-$$1 = \Delta_{FP} \int\mathrm{d}\alpha\, \delta(F(\vec{v}_\alpha) - \omega).$$
+$$1 = \Delta_{\text{FP}} \int\mathrm{d}\alpha\, \delta(F(\vec{v}_\alpha) - \omega).$$
 
 对于一个良好定义的"规范固定", 我们要求对于每个场构型 $\vec{v}$, 存在 **唯一** 的 $\alpha\_0$ 满足 $F(\vec{v}\_{\alpha\_0}) = \omega$. 因此我们可以用 $\delta$ 函数的积分公式求得
 
-$$\Delta_{FP}(\vec{v}) = \left|\frac{\partial}{\partial\alpha}F(\vec{v}_\alpha)\right|_{\alpha = \alpha_0},$$
+$$\Delta_{\text{FP}}(\vec{v}) = \left|\frac{\partial}{\partial\alpha}F(\vec{v}_\alpha)\right|_{\alpha = \alpha_0},$$
 
-这称为 Faddeev-Popov 行列式[^determinant]. 注意到这个表达式在规范变化下保持不变, 这是因为规范群 $G$ 在自身作用下不变, 因而用于定义 $\Delta\_{FP}(\vec{v})$ 的积分 $\int\mathrm{d}\alpha\,\delta(F(\vec{v}\_\alpha)-\omega)$ 也在规范变换下不变. 由于这个性质, 就有
+这称为 Faddeev-Popov 行列式[^determinant]. 注意到这个表达式在规范变化下保持不变, 这是因为规范群 $G$ 在自身作用下不变, 因而用于定义 $\Delta\_{\text{FP}}(\vec{v})$ 的积分 $\int\mathrm{d}\alpha\,\delta(F(\vec{v}\_\alpha)-\omega)$ 也在规范变换下不变. 由于这个性质, 就有
 
-$$\Delta_{FP}(\vec{v}) = \Delta_{FP}(\vec{v}_{\alpha_0}) = \left|\frac{\partial}{\partial\alpha}F(\vec{v}_{\alpha_0\cdot\alpha})\right|_{\alpha = 0}.$$
+$$\Delta_{\text{FP}}(\vec{v}) = \Delta_{\text{FP}}(\vec{v}_{\alpha_0}) = \left|\frac{\partial}{\partial\alpha}F(\vec{v}_{\alpha_0\cdot\alpha})\right|_{\alpha = 0}.$$
 
 这意味着我们可以考虑无穷小规范变换 $\vec{v}\mapsto \vec{v} + T(\vec{v})\alpha + O(\alpha^2)$, 进而
 
-$$\Delta_{FP}(\vec{v}) = \det(F'\,T(\vec{v}_{\alpha_0})).$$
+$$\Delta_{\text{FP}}(\vec{v}) = \det(F'\,T(\vec{v}_{\alpha_0})).$$
 
 > 这里 $T(\vec{v})$ 是一个作用在 $\alpha$ 上的线性变换, 因此这个表达式里的 $\det$ 是在 $\alpha$ 所在的线性空间上定义的. 在 Yang-Mills 理论中规范变换参数和规范场定义在同一个空间中, 这个 $\det$ 因此就是这个空间上的泛函行列式. 对我们现在的例子而言参数空间是一维的, 因此 $\det$ 只是出于形式上的意义存在.
 {: .prompt-info }
@@ -156,7 +156,7 @@ $$F(\vec{v}) = \frac{y}{x} = \tan\theta = \omega,$$
 
 依照刚才的说法, 可以算出 Faddeev-Popov 行列式[^fp]
 
-$$\Delta_{FP}(\vec{v}) = \frac{1}{2}\left|\frac{\partial}{\partial\theta}\tan\theta\right| = \frac{1}{2\cos^2\theta} = \frac{1}{2} + \frac{y^2}{2x^2}.$$
+$$\Delta_{\text{FP}}(\vec{v}) = \frac{1}{2}\left|\frac{\partial}{\partial\theta}\tan\theta\right| = \frac{1}{2\cos^2\theta} = \frac{1}{2} + \frac{y^2}{2x^2}.$$
 
 这里的系数 $1/2$ 是因为我们的规范固定条件实际上并不完美, 它与每个规范轨道的交点数是两个而非一个. 所幸在这个玩具模型中这可以通过一个简单的 $1/2$ 系数解决.
 
