@@ -118,11 +118,11 @@ $$f_{[a]}(b) = \sum_{i=1}^\infty (b_i - a_i) \quad(\mathrm{mod}~2).$$
 
 和 ChatGPT 讨论解法时发现了一些严肃讨论该问题的文献:
 
-https://www.math.uni-hamburg.de/home/geschke/papers/Choice_and_the_hat_game6.pdf
+<https://www.math.uni-hamburg.de/home/geschke/papers/Choice_and_the_hat_game6.pdf>
 
-https://www.cs.umd.edu/~gasarch/TOPICS/hats/infinite-hats-and-ac.pdf
+<https://www.cs.umd.edu/~gasarch/TOPICS/hats/infinite-hats-and-ac.pdf>
 
-https://arxiv.org/pdf/2411.06002
+<https://arxiv.org/pdf/2411.06002>
 
 如此等等. 第一篇文献指出这个问题不可能在 ZF 体系下被解答, 但同时也指出选择公理是不必须的, 我们可以通过某些弱化版本的选择公理解决该问题. 第二篇文献是对这类问题的综述.
 
